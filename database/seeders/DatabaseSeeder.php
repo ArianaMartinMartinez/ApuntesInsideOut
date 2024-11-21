@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Journal;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -19,5 +20,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        Journal::factory()->create([
+            'entry' => 'Primera entrada',
+            'emotion' => 'img/emotions/alegria.jpg',
+        ]);
+
+        //Journal::factory(10)->create();
     }
 }
